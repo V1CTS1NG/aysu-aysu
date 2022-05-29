@@ -14,12 +14,12 @@
   <meta name="description" content="Сервисный центр по ремонту чиллеров в Узбекистане.">
   
   
-  <title>AYSU MEKANIK</title>
-    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+  <title>AYSU MEKANIK</title>  
+  <link rel="stylesheet" href="slider.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <link rel="stylesheet" href="telegram-icon.css">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-  <link rel="stylesheet" href="flexisel.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -256,18 +256,22 @@
             
             
         </div>
-        <div class="slider">
-            <ul id="flexiselDemo3">
-                <li><img src="/assets/images/carrier-logo.png" /></li>
-                <li><img src="/assets/images/climaveneta.png" /></li>
-                <li><img src="/assets/images/clint-logo.png" /></li>
-                <li><img src="/assets/images/dunham-bush-logo.png" /></li>
-                <li><img src="/assets/images/gree-logo.png" /></li>
-                <li><img src="/assets/images/midea-logo.png" /></li>
-                <li><img src="/assets/images/trane-logo.png" /></li>
-                <li><img src="/assets/images/york-logo.png" /></li>                                                   
-            </ul>  
+
+        <div class="container">
+            <section class="customer-logos slider">
+                <div class="slide"><img src="images/carrier-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/climaveneta.png" alt="logo"></div>
+                <div class="slide"><img src="images/clint-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/dunham-bush-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/gree-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/midea-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/trane-logo.png" alt="logo"></div>
+                <div class="slide"><img src="images/york-logo.png" alt="logo"></div>
         </div>
+    
+
+
+
     </div>
 </section>
 
@@ -373,17 +377,33 @@
         <a href="https://t.me/aysuadm"><img src="https://img.icons8.com/external-flat-icons-inmotus-design/67/000000/external-blue-telegram-flat-icons-inmotus-design.png"/></a>
     </div>
 
-<script type="text/javascript">
-    $("#flexiselDemo3").flexisel({
-        visibleItems: 5,
-        itemsToScroll: 1,         
-        autoPlay: {
-            enable: true,
-            interval: 2000,
-            pauseOnHover: true
-        }        
-    });
-</script>
+    <script>
+    
+        $(document).ready(function(){
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover:false,
+                responsive: [{
+                    breakpoint: 768,
+                    setting: {
+                        slidesToShow:4
+                    }
+                }, {
+                    breakpoint: 520,
+                    setting: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+    
+        </script>
+    
 
   
   <input name="animation" type="hidden">
